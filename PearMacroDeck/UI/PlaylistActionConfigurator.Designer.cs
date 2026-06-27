@@ -1,4 +1,4 @@
-namespace YTMDMacroDeck.UI
+namespace PearMacroDeck.UI
 {
     partial class PlaylistActionConfigurator
     {
@@ -88,3 +88,4 @@ namespace YTMDMacroDeck.UI
         }
     }
 }
+

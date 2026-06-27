@@ -2,7 +2,7 @@ using SuchByte.MacroDeck.ActionButton;
 using SuchByte.MacroDeck.Plugins;
 using System.Diagnostics;
 
-namespace YTMDMacroDeck.Actions
+namespace PearMacroDeck.Actions
 {
     public class PlayPauseAction : PluginAction
     {
@@ -16,3 +16,4 @@ namespace YTMDMacroDeck.Actions
         }
     }
 }
+

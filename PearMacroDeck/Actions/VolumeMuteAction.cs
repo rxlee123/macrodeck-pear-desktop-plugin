@@ -1,7 +1,7 @@
 using SuchByte.MacroDeck.ActionButton;
 using SuchByte.MacroDeck.Plugins;
 
-namespace YTMDMacroDeck.Actions
+namespace PearMacroDeck.Actions
 {
     public class VolumeMuteAction : PluginAction
     {
@@ -23,3 +23,4 @@ namespace YTMDMacroDeck.Actions
         }
     }
 }
+

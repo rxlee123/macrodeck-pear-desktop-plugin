@@ -1,11 +1,12 @@
 {
   "type": "Plugin",
-  "name": "YTMD Controller",
+  "name": "Pear Desktop Controller",
   "author": "rxlee",
   "repository": "",
-  "packageId": "rxlee.YTMDMacroDeck",
+  "packageId": "rxlee.PearMacroDeck",
   "version": "1.0.0",
   "target-plugin-api-version": 40,
   "target-macro-deck-version": "13.0.0",
-  "dll": "YTMDMacroDeck.dll"
+  "dll": "PearMacroDeck.dll"
 }
+

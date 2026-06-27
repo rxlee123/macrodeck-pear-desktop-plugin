@@ -3,9 +3,9 @@ using System.Diagnostics;
 using System.Threading;
 using System.Threading.Tasks;
 using SuchByte.MacroDeck.Variables;
-using YTMDMacroDeck.Models;
+using PearMacroDeck.Models;
 
-namespace YTMDMacroDeck.Services
+namespace PearMacroDeck.Services
 {
     /// <summary>
     /// Background poller that periodically fetches the YTMD player state
@@ -13,19 +13,19 @@ namespace YTMDMacroDeck.Services
     /// </summary>
     public class StatePoller : IDisposable
     {
-        private readonly YTMDClient _client;
+        private readonly PearClient _client;
         private Timer _timer;
         private bool _disposed;
         private bool _isPolling;
 
         private const int PollIntervalMs = 2000; // 2 seconds
-        private const string PluginName = "YTMDMacroDeck";
+        private const string PluginName = "PearMacroDeck";
 
         // Track the last known repeat mode to enable cycling
         public int LastRepeatMode { get; private set; }
         public bool LastMuteState { get; private set; }
 
-        public StatePoller(YTMDClient client)
+        public StatePoller(PearClient client)
         {
             _client = client ?? throw new ArgumentNullException(nameof(client));
         }
@@ -82,26 +82,26 @@ namespace YTMDMacroDeck.Services
             {
                 if (songInfo != null)
                 {
-                    SetVariable("ytmd_title", songInfo.Title ?? "", VariableType.String);
-                    SetVariable("ytmd_artist", songInfo.Artist ?? "", VariableType.String);
-                    SetVariable("ytmd_album", songInfo.Album ?? "", VariableType.String);
-                    SetVariable("ytmd_is_playing", (!songInfo.IsPaused).ToString(), VariableType.Bool);
+                    SetVariable("pear_title", songInfo.Title ?? "", VariableType.String);
+                    SetVariable("pear_artist", songInfo.Artist ?? "", VariableType.String);
+                    SetVariable("pear_album", songInfo.Album ?? "", VariableType.String);
+                    SetVariable("pear_is_playing", (!songInfo.IsPaused).ToString(), VariableType.Bool);
                 }
 
                 if (volume != null)
                 {
-                    SetVariable("ytmd_volume", volume.Volume.ToString(), VariableType.Integer);
+                    SetVariable("pear_volume", volume.Volume.ToString(), VariableType.Integer);
                     LastMuteState = volume.IsMuted;
                 }
 
                 if (shuffle != null)
                 {
-                    SetVariable("ytmd_is_shuffled", shuffle.IsShuffled.ToString(), VariableType.Bool);
+                    SetVariable("pear_is_shuffled", shuffle.IsShuffled.ToString(), VariableType.Bool);
                 }
 
                 if (repeatMode != null)
                 {
-                    SetVariable("ytmd_repeat_mode", repeatMode.Mode ?? "NONE", VariableType.String);
+                    SetVariable("pear_repeat_mode", repeatMode.Mode ?? "NONE", VariableType.String);
 
                     // Cache for action use
                     int repeatModeInt = 0;
@@ -138,3 +138,4 @@ namespace YTMDMacroDeck.Services
         }
     }
 }
+

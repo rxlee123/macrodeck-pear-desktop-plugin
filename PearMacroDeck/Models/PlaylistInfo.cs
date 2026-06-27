@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace YTMDMacroDeck.Models
+namespace PearMacroDeck.Models
 {
     /// <summary>
     /// Represents a YouTube Music playlist returned by GET /api/v1/playlists.
@@ -50,3 +50,4 @@ namespace YTMDMacroDeck.Models
         public string FirstVideoId { get; set; }
     }
 }
+

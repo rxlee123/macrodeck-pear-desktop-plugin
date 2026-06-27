@@ -1,4 +1,4 @@
-namespace YTMDMacroDeck.UI
+namespace PearMacroDeck.UI
 {
     partial class ConfiguratorForm
     {
@@ -47,7 +47,7 @@ namespace YTMDMacroDeck.UI
             this.lblTitle.Location = new System.Drawing.Point(16, 12);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(280, 25);
-            this.lblTitle.Text = "🎵 YTMD Controller Settings";
+            this.lblTitle.Text = "🎵 Pear Desktop Controller Settings";
 
             // grpConnection
             this.grpConnection.ForeColor = System.Drawing.Color.White;
@@ -148,7 +148,7 @@ namespace YTMDMacroDeck.UI
             this.MinimizeBox = false;
             this.Name = "ConfiguratorForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "YTMD Controller Settings";
+            this.Text = "Pear Desktop Controller Settings";
             this.grpConnection.ResumeLayout(false);
             this.grpConnection.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numPort)).EndInit();
@@ -157,3 +157,4 @@ namespace YTMDMacroDeck.UI
         }
     }
 }
+

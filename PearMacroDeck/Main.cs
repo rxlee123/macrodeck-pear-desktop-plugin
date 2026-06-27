@@ -2,15 +2,15 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using SuchByte.MacroDeck.Plugins;
-using YTMDMacroDeck.Actions;
-using YTMDMacroDeck.Models;
-using YTMDMacroDeck.Services;
-using YTMDMacroDeck.UI;
+using PearMacroDeck.Actions;
+using PearMacroDeck.Models;
+using PearMacroDeck.Services;
+using PearMacroDeck.UI;
 
-namespace YTMDMacroDeck
+namespace PearMacroDeck
 {
     /// <summary>
-    /// YTMD Controller plugin for Macro Deck 2.
+    /// Pear Desktop Controller plugin for Macro Deck 2.
     /// Controls YouTube Music Desktop App via its Companion Server API v2.
     /// </summary>
     public class Main : MacroDeckPlugin
@@ -18,7 +18,7 @@ namespace YTMDMacroDeck
         /// <summary>
         /// Shared YTMD HTTP client instance.
         /// </summary>
-        public static YTMDClient Client { get; private set; }
+        public static PearClient Client { get; private set; }
 
         /// <summary>
         /// Shared state poller instance.
@@ -37,7 +37,7 @@ namespace YTMDMacroDeck
         {
             Instance = this;
             // Initialize client and poller
-            Client = new YTMDClient();
+            Client = new PearClient();
             Poller = new StatePoller(Client);
 
             // Load saved config and apply to client
@@ -85,7 +85,7 @@ namespace YTMDMacroDeck
                 var json = PluginConfiguration.GetValue(this, "config");
                 if (!string.IsNullOrEmpty(json))
                 {
-                    var config = JsonConvert.DeserializeObject<YTMDConfig>(json);
+                    var config = JsonConvert.DeserializeObject<PearConfig>(json);
                     Client.Configure(config);
                 }
             }
@@ -96,3 +96,4 @@ namespace YTMDMacroDeck
         }
     }
 }
+

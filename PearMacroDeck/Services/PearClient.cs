@@ -5,37 +5,37 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using YTMDMacroDeck.Models;
+using PearMacroDeck.Models;
 
-namespace YTMDMacroDeck.Services
+namespace PearMacroDeck.Services
 {
     /// <summary>
     /// HTTP client wrapper for the YTMD Companion Server API v2.
     /// Handles authentication, player commands, and playlist retrieval.
     /// </summary>
-    public class YTMDClient : IDisposable
+    public class PearClient : IDisposable
     {
         private readonly HttpClient _httpClient;
-        private YTMDConfig _config;
+        private PearConfig _config;
         private bool _disposed;
 
         public bool IsAuthenticated => !string.IsNullOrEmpty(_config?.Token);
 
-        public YTMDClient()
+        public PearClient()
         {
             _httpClient = new HttpClient
             {
                 Timeout = TimeSpan.FromSeconds(10)
             };
-            _config = new YTMDConfig();
+            _config = new PearConfig();
         }
 
         /// <summary>
         /// Updates the client configuration (host, port, token).
         /// </summary>
-        public void Configure(YTMDConfig config)
+        public void Configure(PearConfig config)
         {
-            _config = config ?? new YTMDConfig();
+            _config = config ?? new PearConfig();
             _httpClient.DefaultRequestHeaders.Remove("Authorization");
             if (!string.IsNullOrEmpty(_config.Token))
             {
@@ -238,3 +238,4 @@ namespace YTMDMacroDeck.Services
         }
     }
 }
+

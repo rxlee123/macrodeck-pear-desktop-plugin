@@ -1,6 +1,6 @@
-# YTMD Controller — Macro Deck 2 Plugin
+# Pear Desktop Controller — Macro Deck 2 Plugin
 
-Control **YouTube Music Desktop App** from your Macro Deck 2 setup. Features playback controls, volume management, and a **playlist switcher** where each button plays a different playlist.
+Control **Pear Desktop App** from your Macro Deck 2 setup. Features playback controls, volume management, and a **playlist switcher** where each button plays a different playlist.
 
 ## Features
 
@@ -28,29 +28,29 @@ The plugin exposes these Macro Deck variables, updated every 2 seconds:
 
 | Variable | Type | Description |
 |----------|------|-------------|
-| `ytmd_title` | String | Current track title |
-| `ytmd_artist` | String | Current track artist |
-| `ytmd_album` | String | Current track album |
-| `ytmd_is_playing` | Bool | Whether music is playing |
-| `ytmd_volume` | Integer | Current volume (0-100) |
-| `ytmd_repeat_mode` | String | "None", "All", or "One" |
-| `ytmd_is_shuffled` | Bool | Whether shuffle is on |
+| `pear_title` | String | Current track title |
+| `pear_artist` | String | Current track artist |
+| `pear_album` | String | Current track album |
+| `pear_is_playing` | Bool | Whether music is playing |
+| `pear_volume` | Integer | Current volume (0-100) |
+| `pear_repeat_mode` | String | "None", "All", or "One" |
+| `pear_is_shuffled` | Bool | Whether shuffle is on |
+
+*(Note: Variables currently use the `pear_` prefix for legacy compatibility.)*
 
 ## Requirements
 
-- **YouTube Music Desktop App** v2.x or higher ([download](https://github.com/ytmdesktop/ytmdesktop))
-- **Companion Server** enabled in YTMD (Settings → Integrations → Enable Companion Server)
-- **Companion Authorization** enabled in YTMD
+- **Pear Desktop App** ([download](https://github.com/pear-devs/pear-desktop))
+- **Companion/API Server** enabled in Pear Desktop (Settings → Integrations → Enable Companion Server)
 
 ## Setup
 
-1. **Build** the plugin (see below) and copy the output DLL to `%AppData%\Macro Deck\plugins\YTMDMacroDeck\`
+1. **Build** the plugin (see below) and copy the output DLL to `%AppData%\Macro Deck\plugins\PearMacroDeck\`
 2. Open Macro Deck 2
-3. Find "YTMD Controller" in the plugin list
+3. Find "Pear Desktop Controller" (or "Pear Desktop Controller") in the plugin list
 4. Click **Configure**:
    - Set Host (default: `localhost`) and Port (default: `9863`)
-   - Click **Authorize** — a code will appear
-   - In the YTMD app, approve the authorization request
+   - Click **Authorize** and follow the prompts.
 5. Add buttons with your desired actions
 6. For playlist buttons: right-click → Configure → Fetch Playlists → Select one
 
@@ -60,8 +60,9 @@ The plugin exposes these Macro Deck variables, updated every 2 seconds:
 dotnet build -c Release
 ```
 
-> **Note:** You must update the `Macro Deck 2.dll` reference path in `YTMDMacroDeck.csproj` to match your Macro Deck installation directory.
+> **Note:** The `Macro Deck 2.dll` reference path is dynamically configured, so it should build on any Windows machine out of the box!
 
 ## License
 
 MIT
+

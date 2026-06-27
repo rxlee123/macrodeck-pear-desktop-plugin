@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
 using SuchByte.MacroDeck.Plugins;
-using YTMDMacroDeck.Models;
+using PearMacroDeck.Models;
 
-namespace YTMDMacroDeck.UI
+namespace PearMacroDeck.UI
 {
     /// <summary>
     /// Plugin-level configurator form for setting YTMD connection details and authorizing.
@@ -13,7 +13,7 @@ namespace YTMDMacroDeck.UI
     public partial class ConfiguratorForm : Form
     {
         private readonly MacroDeckPlugin _plugin;
-        private YTMDConfig _config;
+        private PearConfig _config;
 
         public ConfiguratorForm(MacroDeckPlugin plugin)
         {
@@ -28,12 +28,12 @@ namespace YTMDMacroDeck.UI
             {
                 var json = PluginConfiguration.GetValue(_plugin, "config");
                 _config = !string.IsNullOrEmpty(json)
-                    ? JsonConvert.DeserializeObject<YTMDConfig>(json)
-                    : new YTMDConfig();
+                    ? JsonConvert.DeserializeObject<PearConfig>(json)
+                    : new PearConfig();
             }
             catch
             {
-                _config = new YTMDConfig();
+                _config = new PearConfig();
             }
 
             txtHost.Text = _config.Host;
@@ -131,3 +131,4 @@ namespace YTMDMacroDeck.UI
         }
     }
 }
+

@@ -5,10 +5,10 @@ using SuchByte.MacroDeck.ActionButton;
 using SuchByte.MacroDeck.GUI;
 using SuchByte.MacroDeck.GUI.CustomControls;
 using SuchByte.MacroDeck.Plugins;
-using YTMDMacroDeck.Models;
-using YTMDMacroDeck.UI;
+using PearMacroDeck.Models;
+using PearMacroDeck.UI;
 
-namespace YTMDMacroDeck.Actions
+namespace PearMacroDeck.Actions
 {
     /// <summary>
     /// Configurable action that plays a specific YouTube Music playlist.
@@ -58,3 +58,4 @@ namespace YTMDMacroDeck.Actions
         }
     }
 }
+

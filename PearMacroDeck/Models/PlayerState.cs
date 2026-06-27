@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace YTMDMacroDeck.Models
+namespace PearMacroDeck.Models
 {
     /// <summary>
     /// Represents the current player state returned by GET /api/v1/state.
@@ -53,3 +53,4 @@ namespace YTMDMacroDeck.Models
         public string AccessToken { get; set; }
     }
 }
+

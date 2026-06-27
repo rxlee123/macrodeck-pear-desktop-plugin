@@ -6,9 +6,9 @@ using Newtonsoft.Json;
 using SuchByte.MacroDeck.GUI.CustomControls;
 using SuchByte.MacroDeck.GUI;
 using SuchByte.MacroDeck.Plugins;
-using YTMDMacroDeck.Models;
+using PearMacroDeck.Models;
 
-namespace YTMDMacroDeck.UI
+namespace PearMacroDeck.UI
 {
     /// <summary>
     /// Per-action configurator for PlayPlaylistAction.
@@ -162,3 +162,4 @@ namespace YTMDMacroDeck.UI
         }
     }
 }
+

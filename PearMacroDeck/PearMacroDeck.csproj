@@ -3,8 +3,8 @@
   <PropertyGroup>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
-    <AssemblyName>YTMDMacroDeck</AssemblyName>
-    <RootNamespace>YTMDMacroDeck</RootNamespace>
+    <AssemblyName>PearMacroDeck</AssemblyName>
+    <RootNamespace>PearMacroDeck</RootNamespace>
     <Version>1.0.0</Version>
     <Authors>rxlee</Authors>
     <Description>YouTube Music Desktop App controller plugin for Macro Deck 2</Description>
@@ -35,3 +35,4 @@
   </ItemGroup>
 
 </Project>
+
