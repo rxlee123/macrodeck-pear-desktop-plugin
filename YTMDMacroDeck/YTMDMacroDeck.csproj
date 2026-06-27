@@ -29,7 +29,7 @@
   -->
   <ItemGroup>
     <Reference Include="Macro Deck 2">
-      <HintPath>C:\Users\rxlee\AppData\Local\Programs\Macro Deck\Macro Deck 2.dll</HintPath>
+      <HintPath>$(LocalAppData)\Programs\Macro Deck\Macro Deck 2.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
