@@ -2,11 +2,10 @@
   "type": "Plugin",
   "name": "Pear Desktop Controller",
   "author": "rxlee",
-  "repository": "",
+  "repository": "https://github.com/rxlee123/macrodeck-pear-desktop-plugin",
   "packageId": "rxlee.PearMacroDeck",
   "version": "1.0.0",
   "target-plugin-api-version": 40,
   "target-macro-deck-version": "13.0.0",
   "dll": "PearMacroDeck.dll"
 }
-
