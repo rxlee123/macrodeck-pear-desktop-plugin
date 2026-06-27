@@ -1,0 +1,11 @@
+{
+  "type": "Plugin",
+  "name": "YTMD Controller",
+  "author": "rxlee",
+  "repository": "",
+  "packageId": "rxlee.YTMDMacroDeck",
+  "version": "1.0.0",
+  "target-plugin-api-version": 40,
+  "target-macro-deck-version": "13.0.0",
+  "dll": "YTMDMacroDeck.dll"
+}

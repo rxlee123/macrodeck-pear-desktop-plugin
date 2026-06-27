@@ -1,0 +1,1 @@
+using System; using Mono.Cecil; class Program { static void Main() { var md = AssemblyDefinition.ReadAssembly(@"C:\Users\rxlee\AppData\Local\Programs\Macro Deck\Macro Deck 2.dll"); foreach(var t in md.MainModule.Types) { if (t.Name.Contains("Action") || t.Name.Contains("Variable")) Console.WriteLine(t.FullName); } } }
